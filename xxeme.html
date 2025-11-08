@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le XXème siècle</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+header { background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%); color: white; padding: 2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.subtitle { font-size: 1.2rem; opacity: 0.9; font-style: italic; }
+nav { background-color: #006666; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.nav-button { background-color: #008B8B; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 5px; transition: all 0.3s ease; font-weight: 500; border: 2px solid transparent; }
+.nav-button:hover { background-color: #20B2AA; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+.nav-button.active { background-color: #FFD700; color: #006666; border-color: #FFA500; font-weight: bold; }
+main { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+.content-box { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+h2 { color: #008B8B; font-size: 2rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #20B2AA; }
+h3 { color: #006666; font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 1rem; }
+.timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.timeline-item { background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%); color: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+.timeline-item:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.timeline-year { font-size: 1.8rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center; background-color: rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 5px; }
+.timeline-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; text-align: center; border-bottom: 2px solid rgba(255,255,255,0.5); padding-bottom: 0.5rem; }
+.timeline-content { font-size: 0.95rem; line-height: 1.6; }
+.intro-text { font-size: 1.1rem; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem; }
+.important-note { background-color: #E0F7FA; padding: 1rem; border-left: 4px solid #008B8B; border-radius: 5px; margin: 1rem 0; }
+footer { background-color: #006666; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
+.footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+ul { margin-left: 2rem; margin-top: 1rem; }
+li { margin-bottom: 0.5rem; }
+strong { color: #008B8B; }
+.timeline-item strong, .memo-card strong { color: #FFFFFF; font-weight: bold; }
+.timeline-content strong { color: #FFD700; }
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .nav-container { flex-direction: column; }
+    .nav-button { width: 100%; text-align: center; }
+    .timeline { grid-template-columns: 1fr; }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Le XXème siècle et au-delà</h1>
+            <p class="subtitle">La France dans les drames des guerres mondiales et sa reconstruction</p>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-button">Accueil</a>
+            <a href="revolution.html" class="nav-button">La Révolution (1789-1794)</a>
+            <a href="napoleon.html" class="nav-button">Période Napoléonienne</a>
+            <a href="xixeme.html" class="nav-button">XIXème siècle</a>
+            <a href="xxeme.html" class="nav-button active">XXème siècle</a>
+            <a href="memos.html" class="nav-button">Mémos</a>
+        </div>
+    </nav>
+    <main>
+        <div class="content-box">
+            <h2>La IIIème République (1875-1940)</h2>
+            <div class="intro-text">
+                <ul>
+                    <li><strong>Affaire Dreyfus</strong></li>
+                    <li><strong>École obligatoire (1885)</strong></li>
+                    <li><strong>Loi de 1901</strong> (liberté d'association)</li>
+                    <li><strong>Loi de 1905</strong> (laïcité)</li>
+                    <li><strong>1914-1918 :</strong> Grande Guerre (1,4 million de Français tués)</li>
+                    <li><strong>1936 :</strong> Front populaire (Léon Blum)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>Les régimes du XXème siècle</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1940-1944</div>
+                    <div class="timeline-title">Vichy</div>
+                    <div class="timeline-content">
+                        <strong>Collaboration</strong> entre l'extrême-droite et l'ennemi nazi<br><br>
+                        <strong>Résistance :</strong> Gaullistes et Communistes<br>
+                        <strong>27 mai 1943 :</strong> Unification (Jean Moulin)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1946-1958</div>
+                    <div class="timeline-title">IVème République</div>
+                    <div class="timeline-content">
+                        <strong>Constitution :</strong> Sécurité sociale, nationalisations<br><br>
+                        <strong>Instabilité ministérielle</strong><br><br>
+                        <strong>Décolonisation difficile</strong><br>
+                        Guerre d'Algérie<br><br>
+                        <strong>13 mai 1958 :</strong> Rappel de de Gaulle
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1958-1969</div>
+                    <div class="timeline-title">L'ère de Gaulle</div>
+                    <div class="timeline-content">
+                        <strong>Vème République</strong><br><br>
+                        <strong>1962 :</strong> Élection du PR au suffrage universel direct<br><br>
+                        <strong>1969 :</strong> Démission après référendum
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1981-1995</div>
+                    <div class="timeline-title">François Mitterrand</div>
+                    <div class="timeline-content">
+                        <strong>10 mai 1981 :</strong> 1er Président de gauche<br><br>
+                        <strong>1986 :</strong> 1ère cohabitation
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1995-2007</div>
+                    <div class="timeline-title">Jacques Chirac</div>
+                    <div class="timeline-content">
+                        <strong>1997-2002 :</strong> 2ème cohabitation<br><br>
+                        <strong>21 avril 2002 :</strong> Le Pen au 2ème tour
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2017-...</div>
+                    <div class="timeline-title">Emmanuel Macron</div>
+                    <div class="timeline-content">
+                        <strong>Diplômé de Sciences Po, élu à 39 ans</strong><br><br>
+                        Recomposition politique majeure<br><br>
+                        <strong>2022 :</strong> Réélu<br>
+                        <strong>2024 :</strong> Dissolution de l'Assemblée
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h3>Points essentiels à retenir</h3>
+            <div class="important-note">
+                <ul>
+                    <li><strong>IIIème République (1875-1940) :</strong> Le régime le plus long de l'histoire de France</li>
+                    <li><strong>IVème République (1946-1958) :</strong> Instabilité ministérielle chronique</li>
+                    <li><strong>Vème République (1958-) :</strong> Régime actuel avec un exécutif fort</li>
+                    <li><strong>1962 :</strong> Élection du Président au suffrage universel direct</li>
+                    <li><strong>Trois cohabitations :</strong> 1986-1988, 1993-1995, 1997-2002</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Fiche Technique - Préparation à Sciences Po</p>
+            <p>Propriété intellectuelle & © KES - V180-925</p>
+        </div>
+    </footer>
+</body>
+</html>

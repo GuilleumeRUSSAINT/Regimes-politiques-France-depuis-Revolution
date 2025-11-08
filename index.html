@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les régimes politiques en France depuis la Révolution</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+nav {
+    background-color: #006666;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.nav-button {
+    background-color: #008B8B;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+.nav-button:hover {
+    background-color: #20B2AA;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-button.active {
+    background-color: #FFD700;
+    color: #006666;
+    border-color: #FFA500;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.content-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #008B8B;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #20B2AA;
+}
+
+h3 {
+    color: #006666;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.timeline-year {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background-color: rgba(255,255,255,0.2);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.timeline-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-bottom: 0.5rem;
+}
+
+.timeline-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background-color: #FFFACD;
+    padding: 1.5rem;
+    border-left: 4px solid #FFD700;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.important-note {
+    background-color: #E0F7FA;
+    padding: 1rem;
+    border-left: 4px solid #008B8B;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.quote {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-left: 4px solid #008B8B;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+
+.quote-author {
+    text-align: right;
+    font-weight: bold;
+    color: #008B8B;
+    margin-top: 0.5rem;
+}
+
+.memo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.memo-card {
+    background: linear-gradient(135deg, #008B8B 0%, #20B2AA 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.memo-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background-color: rgba(255,255,255,0.2);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.memo-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #006666;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+strong {
+    color: #008B8B;
+}
+.timeline-item strong, .memo-card strong { color: #FFFFFF; font-weight: bold; }
+.timeline-content strong { color: #FFD700; }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .nav-container {
+        flex-direction: column;
+    }
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Les régimes politiques en France depuis la Révolution</h1>
+            <p class="subtitle">Histoire des XIXème et XXème siècles - Préparation à Sciences Po</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-button  active">Accueil</a>
+            <a href="revolution.html" class="nav-button">La Révolution (1789-1794)</a>
+            <a href="napoleon.html" class="nav-button">Période Napoléonienne</a>
+            <a href="xixeme.html" class="nav-button">XIXème siècle</a>
+            <a href="xxeme.html" class="nav-button">XXème siècle</a>
+            <a href="memos.html" class="nav-button">Mémos</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h2>« Au commencement était… La Révolution française ! »</h2>
+            
+            <div class="quote">
+                <p>« Le moins qu'on puisse attendre d'un homme cultivé, c'est qu'il connaisse son temps »</p>
+                <p class="quote-author">— Émile BOUTMY, fondateur de Sciences Po</p>
+            </div>
+
+            <div class="intro-text">
+                <p>Perçues comme l'œuvre de la Révolution française, les années napoléoniennes et leur expansion européenne peuvent vraiment être considérées comme ayant durablement imprimé leur marque dans la suite des régimes politiques en France après la Restauration qui leur a succédé.</p>
+                
+                <p>La dialectique d'un Peuple qui hésite entre conquête de sa souveraineté et don aveugle de celle-ci à un homme fort, par la voie du référendum ou de l'anti-parlementarisme, l'idée des Droits de l'Homme comme valeur à répandre universellement, et l'incapacité à intégrer définitivement ni un humanisme éclairé ni un universalisme issus des Lumières, sont autant de contradictions qui, non résolues, font voir notre pays et sa puissance comme un sujet d'étonnement par beaucoup d'autres...</p>
+            </div>
+
+            <div class="important-note">
+                <p><strong>La connaissance précise des régimes politiques français depuis la Révolution est un « minimum minimorum » à maîtriser par qui prétend être un acteur conscient de son destin politique. Donc par tout(e) candidat(e) à l'entrée à Sciences Po...</strong></p>
+                <p>Lors des récents oraux à Paris, des questions sur cette suite de régimes sont tombées, ont conduit à de nombreux ajournements de nombreux préparants anonymes, et à quelques succès remarqués pour nos propres élèves.</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2>Sommaire des périodes historiques</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1789-1794</div>
+                    <div class="timeline-title">Les phases institutionnelles de la Révolution</div>
+                    <div class="timeline-content">
+                        La Constituante, la Législative, la Convention. L'An 1 de la République le 21 septembre 1792.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1797-1815</div>
+                    <div class="timeline-title">La période napoléonienne</div>
+                    <div class="timeline-content">
+                        Le Directoire, le 18 Brumaire, le Consulat, l'Empire, et les Cent Jours.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1815-1877</div>
+                    <div class="timeline-title">Le XIXème siècle</div>
+                    <div class="timeline-content">
+                        Monarchie restaurée des Bourbons, monarchie bourgeoise des Orléans, République hésitante...
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1875-Aujourd'hui</div>
+                    <div class="timeline-title">Le XXème siècle et au-delà</div>
+                    <div class="timeline-content">
+                        La France dans les drames des 2 guerres mondiales puis dans sa reconstruction. IIIème, IVème et Vème Républiques.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h3>Sources</h3>
+            <ul>
+                <li>Sites, serveurs & documentation de l'association & KES</li>
+                <li>Documentation personnelle de l'auteur</li>
+                <li>Catalogue de cours de la 1ère Prépa Sciences Po en ligne</li>
+                <li>Documents issus de la bibliothèque de Sciences Po</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Fiche Technique - Préparation à Sciences Po</p>
+            <p>Propriété intellectuelle & © KES - V180-925</p>
+            <p>Prépa Sciences Po - Komensky Elite Switzerland</p>
+        </div>
+    </footer>
+</body>
+</html>
